@@ -91,7 +91,11 @@
             <p class="text">Diseño y desarrollo interfaces de carga ultra-rápida que convierten visitantes <br> en clientes. Desde tu primera landing page hasta plataformas escalables que <br> crecen con tu éxito.</p>
             <button class="buttonMAin" type="button" onclick="document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })">VER SERVICIOS →</button>
         </article>
-        <img src="./img/headerImg.avif" alt="imagen del robot" id="headerImge" width="1200" height="1492">
+         <picture id="headerImge">
+            <source id="sourceMobile" srcset="./img/headerImgMobile.avif" media="(max-width: 949px)" />
+            <source id="sourceDesktop" srcset="./img/headerImg.avif" media="(min-width: 950px)" />
+            <img src="./img/headerImg.avif" alt="imagen del robot">
+        </picture>
     </header>
     <main>
         <section id="servicios" class="padding">
