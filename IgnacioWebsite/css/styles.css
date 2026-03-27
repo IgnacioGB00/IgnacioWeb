@@ -554,7 +554,7 @@ footer{
             justify-content: center;
 
             a{
-                font-size: var(--font-body) !important;
+                font-size: var(--fs-body) !important;
             }
         }
     }
