@@ -1,11 +1,10 @@
-# https://www.robotstxt.org/robotstxt.html
-
-# Permitir que todos los robots rastreen todo el sitio
 User-agent: *
 Allow: /
 
-# No hay carpetas privadas que ocultar en este momento,
-# pero si tuvieras un panel de administración, usarías Disallow: /admin/
+# Bloquear archivos innecesarios para el rastreo
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
 
-# Indicar la ubicación del Sitemap
-Sitemap: https://tu-dominio.com/sitemap.xml
+# Sitemap
+Sitemap: https://ignacio-web.vercel.app/sitemap.xml
