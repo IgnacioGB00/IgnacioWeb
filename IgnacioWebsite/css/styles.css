@@ -69,6 +69,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_opsz_wght.woff2') format('woff2');
+  font-weight: 100 900;   /* rango variable */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('../fonts/Sora-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;   /* rango variable */
+  font-style: normal;
+  font-display: swap;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -249,7 +265,7 @@ section{
         article{
             background-color: var(--bg-surface);
             width: 364px;
-            height: 450px;
+            height: auto;
             display: flex;
             flex-direction: column;
             gap: var(--space-md);
