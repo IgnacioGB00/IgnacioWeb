@@ -92,6 +92,7 @@ html{
 
 body{
     background: var(--bg-main);
+  font-family: var(--font-body);
     
 }
 
