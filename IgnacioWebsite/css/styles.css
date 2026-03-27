@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_opsz_wght.woff2') format('woff2');
+  font-weight: 100 900;   /* rango variable */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('../fonts/Sora-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;   /* rango variable */
+  font-style: normal;
+  font-display: swap;
+}
 :root {
 
   --bg-main:        #100B16;  /* Fondo global · body · secciones    */
@@ -70,21 +85,7 @@
     box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-VariableFont_opsz_wght.woff2') format('woff2');
-  font-weight: 100 900;   /* rango variable */
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'Sora';
-  src: url('../fonts/Sora-VariableFont_wght.woff2') format('woff2');
-  font-weight: 100 900;   /* rango variable */
-  font-style: normal;
-  font-display: swap;
-}
 html{
     scroll-behavior: smooth;
 }
