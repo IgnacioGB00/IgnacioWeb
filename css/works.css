@@ -79,7 +79,6 @@ picture{
         }
     }
     ul{
-        grid-template-columns: repeat(2, 1fr);
         li{
             display: flex;
             a{
@@ -113,7 +112,7 @@ picture{
 }
 
 @media (min-width: 768px) {
-    #button-header{
+    #button-header, #develop ul{
         grid-template-columns: repeat(2, 1fr);
     
     }
