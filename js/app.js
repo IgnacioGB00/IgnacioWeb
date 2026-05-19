@@ -20,10 +20,11 @@ document.addEventListener('mousemove', e => {
 });
 
 worksItems.forEach(item => {
-  const key = item.dataset.work; // atributo data-work en el <li>
+  const key = item.dataset.work;
+  const link = item.querySelector('a');
 
   if (!isTouchDevice()) {
-    // Desktop: hover sigue el cursor
+    // Desktop: imagen sigue al cursor (sin cambios)
     item.addEventListener('mouseenter', () => {
       cursorImg.src = worksImages[key];
       cursorImg.classList.add('visible');
@@ -31,13 +32,23 @@ worksItems.forEach(item => {
     item.addEventListener('mouseleave', () => {
       cursorImg.classList.remove('visible');
     });
+
   } else {
-    // Mobile/tablet: tap expande preview
-    item.querySelector('a').addEventListener('click', e => {
-      e.preventDefault();
-      const isOpen = item.classList.contains('open');
+    // Mobile/Tablet: primer tap = preview, segundo tap = navegar
+    link.addEventListener('click', e => {
+      const isAlreadyOpen = item.classList.contains('open');
+
+      // Cerrar todos los demás primero
       worksItems.forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+
+      if (isAlreadyOpen) {
+        // Ya estaba abierto → dejar que el enlace navegue normalmente
+        return; // No hacer preventDefault, no añadir clase
+      } else {
+        // Primer tap → mostrar preview, bloquear navegación
+        e.preventDefault();
+        item.classList.add('open');
+      }
     });
   }
 });
