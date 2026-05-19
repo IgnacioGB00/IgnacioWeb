@@ -15,7 +15,6 @@ header{
 }
 
 #button-header{
-    grid-template-columns: repeat(2, 1fr);
     li{
         a{
             display: flex;
@@ -114,6 +113,10 @@ picture{
 }
 
 @media (min-width: 768px) {
+    #button-header{
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
     ul{
         grid-column: 1/3;
         
