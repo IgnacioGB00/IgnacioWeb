@@ -9,7 +9,7 @@ const worksImages = {
   'temple':   './img/legoDesktop.avif',
 };
 
-// Crear el elemento imagen para cursor (desktop)
+// Crear el elemento imagen para cursor (solo desktop)
 const cursorImg = document.createElement('img');
 cursorImg.className = 'works-cursor-img';
 document.body.appendChild(cursorImg);
@@ -21,10 +21,9 @@ document.addEventListener('mousemove', e => {
 
 worksItems.forEach(item => {
   const key = item.dataset.work;
-  const link = item.querySelector('a');
 
+  // Solo activar el preview con cursor en desktop
   if (!isTouchDevice()) {
-    // Desktop: imagen sigue al cursor (sin cambios)
     item.addEventListener('mouseenter', () => {
       cursorImg.src = worksImages[key];
       cursorImg.classList.add('visible');
@@ -32,25 +31,8 @@ worksItems.forEach(item => {
     item.addEventListener('mouseleave', () => {
       cursorImg.classList.remove('visible');
     });
-
-  } else {
-    // Mobile/Tablet: primer tap = preview, segundo tap = navegar
-    link.addEventListener('click', e => {
-      const isAlreadyOpen = item.classList.contains('open');
-
-      // Cerrar todos los demás primero
-      worksItems.forEach(i => i.classList.remove('open'));
-
-      if (isAlreadyOpen) {
-        // Ya estaba abierto → dejar que el enlace navegue normalmente
-        return; // No hacer preventDefault, no añadir clase
-      } else {
-        // Primer tap → mostrar preview, bloquear navegación
-        e.preventDefault();
-        item.classList.add('open');
-      }
-    });
   }
+  // En mobile: no hacer nada, el <a> navega normalmente con un toque
 });
 
 
