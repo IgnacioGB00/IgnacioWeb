@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/app.js" defer></script>
+    <script src="./js/canvas.js" defer></script>
+    <script src="./js/translations.js" defer></script>
+    <title>ignacio</title>
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="flex flex-row">
+                <a href="index.html" class="backgroundDark"><img src="./img/logo.svg" alt="logo de Ignacio" width="50px" height="40px"></a>
+                <input type="checkbox" name="hanburger" id="hamburger">
+                <div class="backgroundDark"></div>
+                <label for="hamburger" id="manu-hamburger" class="backgroundDark flex flex-colum">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
+                <ul class="navContent backgroundDark">
+                    <li><a href="#about" class="text" data-i18n="nav-about">About</a></li>
+                    <li><a href="#works" class="text" data-i18n="nav-works">Works</a></li>
+                    <li><a href="#process" class="text" data-i18n="nav-process">Process</a></li>
+                    <li><a href="#contacts" class="text" data-i18n="nav-contacts">Contacts</a></li>
+                    <li>
+                        <label for="languageSelect">
+                            <select name="languageSelect" id="languageSelect">
+                                <option value="EN" class="text">En</option>
+                                <option value="ES" class="text">Es</option>
+                            </select>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+            <article>
+                <h1 class="title backgroundDark" data-i18n="hero-title">Ignacio Gómez Barrantes</h1>
+                <h2 class="subTitle backgroundDark" data-i18n="hero-sub">Web Designer & Developer Front End.</h2>
+                <p class="text backgroundDark display-none" data-i18n="hero-p">I bridge the gap between design and code — creating interfaces that are both visually precise and technically solid. I specialize in turning complex problems into clean, user-centered experiences using Figma, React and modern CSS.</p>
+                <div class="backgroundDark contentCanvas">
+                    <canvas id="canvas" width="500" height="300"></canvas>
+                </div>
+                <div class="spacewhiteOne backgroundDark"></div>
+                <div class="spacewhiteTwo backgroundDark"></div>
+                <ul class="grid grid-colum" id="button-header">
+                    <li class="backgroundDark" id="button-main"><a href="#works" class="buttonMAin text" data-i18n="btn-work">View my work</a></li>
+                    <li class="backgroundDark"><a href="https://www.instagram.com/ignaciod.web/" class="buttonSecon text">Instagram</a></li>
+                    <li class="backgroundDark"><a href="https://github.com/IgnacioGB00" class="buttonSecon text">Git</a></li>
+                </ul>
+            </article>
+        </header>
+
+        <section id="about" class="sectionContent">
+            <h2 class="backgroundDark title" data-i18n="about-title">About</h2>
+            <div class="backgroundDark contentCanvas"></div>
+            <p class="backgroundDark text" data-i18n="about-p">I'm Ignacio Gómez Barrantes, a UI Designer and Front-End Developer based in Costa Rica. My edge is that I speak both languages fluently — I design in Figma and build in the browser, which means no handoff friction and faster, higher-fidelity results.
+                <br><br>
+                I care deeply about clean code, accessible interfaces, and designs that actually ship. Whether it's a landing page or a full product, I bring the same attention to detail to every pixel and every line.</p>
+            <article class="backgroundDark">
+                <h3 class="subTitle" data-i18n="design-title">Design tools</h3>
+                <ul class="tools">
+                    <li class="text">Figma</li>
+                    <li class="text">Photoshop</li>
+                    <li class="text">Illustrator</li>
+                    <li class="text">AI</li>
+                </ul>
+            </article>
+            <article class="backgroundDark">
+                <h3 class="subTitle" data-i18n="dev-title">Development</h3>
+                <ul class="development">
+                    <li class="text">HTML5</li>
+                    <li class="text">CSS3</li>
+                    <li class="text">JavaScript</li>
+                    <li class="text">Git / GitHub</li>
+                    <li class="text">VS Code</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="works" class="sectionContent">
+            <h2 class="backgroundDark title" data-i18n="works-title">Works</h2>
+            <div class="backgroundDark contentCanvas"></div>
+            <ul class="list-works flex flex-row">
+                <li class="backgroundDark" data-work="batman"><a href="./works/batman.html" class="subTitle">Batma Website <img src="./img/Arrow.svg" alt="Arrow"></a></li>
+                <li class="backgroundDark" data-work="ecobottle"><a href="./works/ecobottle.html" class="subTitle">Ecobottle <img src="./img/Arrow.svg" alt="Arrow"></a></li>
+                <li class="backgroundDark" data-work="cafe"><a href="./works/encuetroCafe.html" class="subTitle">restaurants <img src="./img/Arrow.svg" alt="Arrow"></a></li>
+                <li class="backgroundDark" data-work="temple"><a href="./works/Temple.html" class="subTitle">Temple of Tranquility <img src="./img/Arrow.svg" alt="Arrow"></a></li>
+            </ul>
+        </section>
+
+        <section id="process" class="sectionContent">
+            <h2 class="title backgroundDark" data-i18n="process-title">My process</h2>
+            <article class="backgroundDark flex flex-colum">
+                <p class="numberColor">01</p>
+                <h3 class="subTitle" data-i18n="p01-title">Discover</h3>
+                <p class="text" data-i18n="p01-text">Understanding the problem, the users, and the business goals before touching any design tool.</p>
+            </article>
+            <article class="backgroundDark flex flex-colum">
+                <p class="numberColor">02</p>
+                <h3 class="subTitle" data-i18n="p02-title">Define</h3>
+                <p class="text" data-i18n="p02-text">Information architecture, user flows, and low-fidelity wireframes to validate structure early.</p>
+            </article>
+            <article class="backgroundDark flex flex-colum">
+                <p class="numberColor">03</p>
+                <h3 class="subTitle" data-i18n="p03-title">Design</h3>
+                <p class="text" data-i18n="p03-text">High-fidelity UI in Figma with a proper design system — colors, typography, spacing, components.</p>
+            </article>
+            <article class="backgroundDark flex flex-colum">
+                <p class="numberColor">04</p>
+                <h3 class="subTitle" data-i18n="p04-title">Develop</h3>
+                <p class="text" data-i18n="p04-text">Pixel-perfect, clean front-end code. Responsive, accessible and optimized for performance.</p>
+            </article>
+        </section>
+
+        <section id="contacts" class="sectionContent">
+            <h2 class="backgroundDark title" data-i18n="contacts-title">Contacts</h2>
+            <div class="backgroundDark contentCanvas"></div>
+            <ul class="contacts">
+                <li class="backgroundDark"><a href="https://wa.me/50664033299" class="subTitle">Whatsapp</a></li>
+                <li class="backgroundDark"><a href="https://www.instagram.com/ignaciod.web/" class="subTitle">Instagram</a></li>
+                <li class="backgroundDark"><a href="https://github.com/IgnacioGB00" class="subTitle">Github</a></li>
+                <li class="backgroundDark"><a href="mailto:ignaciogb900@gmail.com" class="subTitle">ignaciogb900@gmail.com</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer class="flex flex-colum">
+        <p class="text" data-i18n="footer">Ignacio Web Designer 2026</p>
+    </footer>
+</body>
+</html>
+
