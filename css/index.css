@@ -39,13 +39,13 @@
 
 #about{
     article{
-        display: grid;
+         display: flex;
+        flex-wrap: wrap;
         gap: var(--space-3);
         ul{
             display: grid;
             gap: var(--space-3);
             align-items: center;
-            grid-template-columns: repeat(3, 1fr);
             height: auto;
             padding: var(--space-3);
 
