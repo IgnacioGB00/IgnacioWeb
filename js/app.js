@@ -36,3 +36,10 @@ worksItems.forEach(item => {
 });
 
 
+document.querySelectorAll('.navContent a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('hamburger').checked = false;
+    });
+});
+
+
